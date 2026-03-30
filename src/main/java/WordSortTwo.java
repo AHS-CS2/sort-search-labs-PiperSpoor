@@ -1,6 +1,6 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
-//Name -
+//Name - Piper Spoor
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -10,16 +10,23 @@ public class WordSortTwo {
 	private String[] wordRay;
 
 	public WordSortTwo(String sentence) {
+		setWords(sentence);
 	}
 
 	public void setWords(String sentence) {
+		wordRay = sentence.split(" ");;
 	}
 
 	public void sort() {
+		Arrays.sort(wordRay);
 	}
 
 	public String toString() {
+		sort();
 		String output = "";
+		for(int i = 0; i < wordRay.length; i++){
+			output += wordRay[i] + "\n";
+		}
 		return output + "\n\n";
 	}
 }
