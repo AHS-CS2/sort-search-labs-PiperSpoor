@@ -1,6 +1,6 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
-//Name -
+//Name - Piper Spoor
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -12,6 +12,14 @@ public class NumberSearch
 {
 	public static int getNextLargest(int[] numArray, int searchNum)
 	{
-		return -1;
+		int nextLargest = 0;
+		for(int val : numArray){
+			if(val > searchNum){
+				if(nextLargest == 0 || val < nextLargest){
+					nextLargest = val;
+				}
+			}
+		}
+		return nextLargest;
 	}
 }
